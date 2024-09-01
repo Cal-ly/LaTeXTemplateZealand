@@ -2,63 +2,33 @@
 \label{chapter:introduction}
 
 \section{Case}
-Blomsterbinderiet er en mindre butik, der ønsker en hjemmeside til at kunne servicere kunder online.
-Deres produkt er primært blomsterdekorationer til forskellige begivenheder og af varierende størrelse.
-Blomsterbinderiet har både \emph{walk-ins}, bestillinger og et samarbejde med flere bedemænd i Roskilde og omegn. Til bedemænd er der særlige services, bl.a. levering til begravelser. Bestillinger fra private skal afhentes.
-Selve butikken er fysisk placeret som en afdeling i Meny Roskilde og har ansat 3 blomsterdekoratører og et varierende (3-10) antal ufaglærte, hovedsageligt unge, assistenter.
-Betalinger sker via \emph{MobilePay} for private og via faktura for erhverv. Dette passer butikken godt, da de ofte gerne vil kunne kontakte kunden med spørgsmål, inden de accepterer ordren.
-Ingen i butikken har IT-erfaring, og der er ikke budget til at have en fast IT-supporter. Butiksbestyreren, som vil være aftager af vores software, har talt om følgende:
+\label{sec:case}
+So what is the case?
+
 \begin{itemize}
-	\item Hjemmeside, hvor kunder kan afgive bestillinger
-	\item Mulighed for at afvise bestillinger/slå bestillinger fra
-	\item Mulighed for at kontakte kunden inden de accepterer en afgivet ordre
-	\item Mulighed for et galleri til at inspirere kunderne
-	\item Funktion hvor de kan se indkommende ordre, evt. notifikation
-	\item Funktion hvor kunder kan kontakte butikken (evt. kontaktformular)
-	\item Særlige funktionaliteter til bedemænd
-	\item Kunden skal kunne vælge mellem forskellige størrelser af samme produkt
-	\item Funktion, så de selv kan oprette, opdatere og arkivere produkter
-	\item Mulighed for at få salgsstatistik, af endnu uspecificeret karakter.
-	\label{list:butikkens-ønsker}
+	\item an item
+	\item another item
+	\item yet another item
 \end{itemize}
 
-\section{Projektet}
+\section{Project description}
+\label{sec:project_description}
 
-\subsection{Problemformulering}
-Hvordan kan man gennem \emph{Razor Pages}, \emph{Entity Framework} og med \emph{SCRUM} som projektstyringsværktøj, udvikle en online webshop til BlomsterBinderiet, 
-så den både imødekommer behovene hos almindelige kunder og lokale bedemænd gennem tilpassede brugeroplevelser og administrationsfunktioner.
+\subsection{Problem statement}
+\label{sec:problem_statement}
+What is the problem?
 
-\subsection{Formål}
-Formålet med projektet er at udvikle en webshop til Blomsterbinderiet, der kan imødekomme behovene hos både almindelige kunder og lokale bedemænd. 
-Dette skal ske gennem en brugervenlig og intuitiv brugergrænseflade, der giver kunderne mulighed for at afgive bestillinger, se produkter og kontakte butikken. 
-Samtidig skal webshoppen give butikken mulighed for at administrere produkter, bestillinger og kunder, samt at se salgsstatistikker.
+\subsection{Problem analysis}
+\label{sec:problem_analysis}
 
-\subsection{Afgrænsning}
-Projektet vil fokusere på udviklingen af en webshop til Blomsterbinderiet, der kan imødekomme behovene hos både almindelige kunder og lokale bedemænd. 
-Der vil være mindre afvigelser fra, hvad man ville gøre i virkeligheden, da projektet er et skoleprojekt og ikke et betalt kontraktprojekt. 
-Dermed vil der være punkter, hvor fokus er på selve processen, dokumentation af denne og levering af et produkt til skolastisk vurdering.
+\subsection{Purpose}
+\label{sec:purpose}
 
-\subsection{Rapportens opbygning}
-Rapporten vil begynde med projektets udgangspunkt og rammer i \Cref{chapter:udgangspunkt}, efterfulgt af en analyse af Blomsterbinderiets forretningsmodel i \Cref{chapter:forretningsanalyse}. 
-Dette videreføres i \Cref{chapter:scrum} om \emph{SCRUM} processen som projektstyringsværktøj og hvordan det anvendes i denne sammenhæng, bl.a. anvendelse af \emph{User Stories}.
-Herefter følger \Cref{chapter:software-design} om software design, der beskriver både den indledende analyse bag modeller og strukturer samt hvilke teknologier der tænkes anvendt.
-Dette vil føre over i \Cref{chapter:scrum-documentation} om selve udviklingen af projektet, hvor de enkelte \emph{Sprints} dokumenteres. 
-I \Cref{chapter:final-product} vil der være en gennemgang af projektets endelige implementering, beskrivelse og tankerne bag de vigtigste afvigelser fra den oprindelige plan.
-Til sidst vil der i \Cref{chapter:conclusion} være en konklusion og perspektivering, der opsummerer projektet og dets resultater, samt giver et bud på hvordan et fremtidigt projekt kunne videreføres.
-Bemærk, alle kapitler opsummeres i \Cref{sec:conclusion_summary} med henblik på at give et samlet overblik over projektet, i stedet for at afrunde de individuelle kapitler med en opsummering. 
-Tanken bag er at give læseren en mulighed for at få et overblik over projektet, blot ved at læse \Cref{chapter:introduction} og derefter \Cref{chapter:conclusion}.
+\subsection{Goal}
+\label{sec:goal}
 
-\subsection{Metode og teknologi}
-\label{sec:metode-teknologi}
-\emph{Razor Pages} (RP) er valgt, da det er pensum. 
-Det giver dog nogle fordele, bl.a. fordi det er en relativt simpel side-fokuseret model, der letter organiseringen og udviklingen af en webapplikation, der kræver flere særskilte sider, bl.a. til produkter, fremvisning af analyser m.m. 
-Gennem \emph{Entity Framework} (EF) kan vi bruge \emph{Code First} approach, der letter vores udvikling ved bl.a. at simplificere implementeringen af mindre modifikationer og speeder processen op, 
-da vi kan fokusere på C-sharp klasserne som udgangspunkt for vores database modellering og styring. Hertil understøtter EF \emph{Language Integrated Query} (LINQ), der muliggør at kode typesikrede queries direkte i C-sharp. 
-Det gør koden mere læsbar, vedligeholdelsesvenlig og vi skal heller ikke manuelt administrere SQL-scripts (samt det reducerer risikoen for \emph{SQL-injektionsangreb}). 
-Alt i alt, så forenkler det administrationen af applikationens datalag. En SQL-database giver et struktureret miljø til lagring af data, hvilket er essentielt for produktkataloget, brugerinformation og ordrestyring i projektet. 
-Den strukturerede tilgang sikrer dataintegritet og letter komplekse forespørgsler, der fx anvendes ved analyser. Vi er bundet til SQL gennem EF.
-\emph{GitHub} anvendes til versionskontrol for at forenkle udviklingen. Det giver et effektivt miljø til versionskontrol og projektstyring, hvilket gør det til et solidt valg til næsten alle softwareprojekter. 
-Yderligere giver det mulighed for at branche og teste nye funktionaliteter men stadig have et minimum viable product på master branch. 
-\emph{Visual Studio 2022} og \emph{ASP.NET Core} Integration: Integrationen mellem \emph{Razor Pages}, \emph{Entity Framework}, \emph{GitHub} og \emph{Visual Studio 2022} giver et kraftfuldt udviklingsmiljø til test og implementering af projektet. 
-Denne integrerede tilgang forenkler udviklingsprocessen, fra skrivning af kode til administration af databaser og implementering af applikationen.
-\emph{Simply.com} er valgt som webhotel på baggrund af projektets scope, samt at de tilbyder forholdsvis lave udgifter til drift.
+\subsection{Scope}
+\label{sec:scope}
+
+\section{Method}
+\label{sec:method}
