@@ -1,4 +1,4 @@
-# My LaTeX Report Template
+# LaTeX Report Template
 This is a LaTeX template designed to be used by faculty and students on Zealand Business College.
 This repository contains a LaTeX class and associated files for creating reports and theses. 
 
