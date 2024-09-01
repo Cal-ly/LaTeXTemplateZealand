@@ -1,0 +1,62 @@
+\begin{titlepage}
+
+\begin{center}
+
+%% Print the title
+{\makeatletter
+\largetitlestyle\fontsize{45}{45}\selectfont\@title
+\makeatother}
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\bigskip\titlestyle\fontsize{20}{20}\selectfont\@subtitle}
+\makeatother}
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\largetitlestyle\fontsize{25}{25}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+%% Print table with names and student numbers
+\setlength\extrarowheight{2pt}
+\begin{tabular}{c}
+    cal002@edu.zealand.dk \\
+\end{tabular}
+
+\vfill
+
+%% Print some more information at the bottom
+\begin{tabular}{l r}
+    Lecturer, SWC:    & Henrik Kryger Høltzer\\
+    Lecturer, SWD:    & Mikkel Lynggaard Krarup\\
+    Project Deadline: & \ddmmyydate{30/05/24} \\
+    Handed-in:       & \ddmmyydate{\today} \\
+    Faculty:         & Computer Science \\
+    Semester:        & 2nd Semester \\
+    Word Count:      & 48180 Characters (including spaces) \\
+\end{tabular}
+
+\bigskip
+%% Add a source and description for the cover and optional attribution for the template
+\begin{tabular}{l r}
+    Cover: & Generated image of binary using DALL-E \\
+    Style: & ZBC template -- created by Carsten Lydeking \\
+\end{tabular}
+
+
+%% Insert the Zealand logo at the bottom of the page
+\begin{tikzpicture}[remember picture]
+    \node[above=10mm] at (current page.south) {%
+        \includegraphics[width=0.35\textwidth]{figures/template-figures/zealandcombinedlogo}
+    };
+\end{tikzpicture}
+
+\end{center}
+
+\end{titlepage}
