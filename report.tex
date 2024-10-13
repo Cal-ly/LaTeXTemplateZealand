@@ -5,7 +5,7 @@
 \useunder{\uline}{\ul}{}
 
 %% Set up the bibliography
-\usepackage{biblatex}
+\usepackage[backend=biber, style=apa]{biblatex}
 \addbibresource{report.bib}
 
 %% Additional packages and commands
@@ -36,11 +36,11 @@
 \frontmatter
 
 %% Define the main parameters
-\title{ .. Title ..}
-\subtitle{ .. Faculty .. \\ .. Semester .. }
-\author{ .. Your Name ..}
+\title{Metode sammenligning}
+\subtitle{Systemudvikling \\ 3. Semester}
+\author{Carsten Lydeking}
 
-\subject{ .. subject .. } % Cover only
+\subject{Projektprocesser} % Cover only
 \large\affiliation{Zealand Business College} % Cover only
 \coverimage{figures/template-figures/binary.jpg} % Aspect ratio of 2:3 (portrait) recommended
 \definecolor{title}{HTML}{4884d6} % Color for cover title
@@ -50,8 +50,8 @@
 \input{front/title-report}
 
 \tableofcontents
-\listoffigures
-\listoftables
+% \listoffigures
+% \listoftables
 
 %\input{front/nomenclature}
 
@@ -64,6 +64,8 @@
 \input{main/introduction}
 
 \input{main/chapter-2}
+
+\input{main/chapter-3}
 
 \input{main/conclusion}
 
@@ -81,7 +83,7 @@
 
 \appendix
 
-\input{appendix/appendix-sourcecode.tex}
-\input{appendix/appendix-diagrams.tex}
+% \input{appendix/appendix-sourcecode.tex}
+% \input{appendix/appendix-diagrams.tex}
 
 \end{document}
